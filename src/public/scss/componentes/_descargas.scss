@@ -1,0 +1,76 @@
+body, html {
+    margin: 0;
+}
+
+.descargas_background{
+    background-image: url('../../assets/img/background_cs.jpg');
+    background-size: cover;
+
+    &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: -1;
+        
+    }
+}
+
+
+.bot_bug_titulo{
+    margin-top: 30px;
+    margin-bottom: 80px;
+    text-align: center;
+    color: white;
+}
+
+.bot_bug_descripcion{
+    margin-bottom: 80px;
+    color: white;
+    
+    .bot_bug_status {
+        margin-bottom: 30px;
+    }
+    
+}
+
+.descripcion_color{
+    color: rgba(214, 214, 18, 0.85);
+}
+
+.bot_status_text{
+    color: rgb(3, 153, 3);
+}
+
+.bot_bug_fix{
+    margin-bottom: 100px;
+    color: white;
+}
+
+.download_file{
+    margin-bottom: 100px;
+    color: white;
+}
+
+.download_text{
+    color: rgb(182, 3, 3);
+    text-decoration: none;
+}
+
+
+
+.video_bug{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+@media screen and (min-height: 0px) and (max-height: 1000px){
+    footer.fixed-bottom{
+        position: relative !important;
+    }
+
+}

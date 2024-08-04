@@ -1,0 +1,72 @@
+[
+  {
+    "id": "b041a7f8-6a33-440a-8888-31a0f8a4ebf5",
+    "title": "zapatillas",
+    "description": "nike",
+    "code": "test",
+    "price": "50",
+    "quantity": "10",
+    "category": "calzado",
+    "status": "true"
+  },
+  {
+    "id": "912fdb64-1608-46e7-af58-77f88354bf9a",
+    "title": "zapatillas",
+    "description": "adidas",
+    "code": "dasdas",
+    "price": "50",
+    "quantity": "10",
+    "category": "calzado",
+    "status": "true"
+  },
+  {
+    "id": "983744d3-baf1-4f54-a740-8827c36ac3e8",
+    "title": "zapatillas",
+    "description": "all star",
+    "code": "dsaads",
+    "price": "50",
+    "quantity": "10",
+    "category": "calzado",
+    "status": "true"
+  },
+  {
+    "id": "499be0c3-0caa-4799-ad88-903d315b90b7",
+    "title": "television",
+    "description": "65 4k noblex",
+    "code": "asdasd",
+    "price": "50",
+    "quantity": "10",
+    "category": "electrodomesticos",
+    "status": "true"
+  },
+  {
+    "id": "615eb1e3-ecc1-4cfd-840b-c6e8d233dab1",
+    "title": "television",
+    "description": "65 4k samsung",
+    "code": "asda",
+    "price": "50",
+    "quantity": "10",
+    "category": "electrodomesticos",
+    "status": "true"
+  },
+  {
+    "id": "b74a17f1-64b0-427b-80a6-20aa4f829ddf",
+    "title": "celular",
+    "description": "nokia 1100",
+    "code": "asdasda",
+    "price": "50",
+    "quantity": "10",
+    "category": "old phones",
+    "status": "true"
+  },
+  {
+    "id": "3da7cb34-2aea-403f-ba3c-2b57ca8d6cb7",
+    "title": "celular",
+    "description": "blackberry",
+    "code": "asdas",
+    "price": "50",
+    "quantity": "10",
+    "category": "old phones",
+    "status": "true"
+  }
+]

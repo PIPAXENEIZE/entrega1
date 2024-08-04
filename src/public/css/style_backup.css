@@ -1,0 +1,195 @@
+@font-face {
+    font-family: titulofont;
+    src: url('../assets/font/debugfont.otf');
+}
+
+:root{
+    --color-banner: #020B1C;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header__banner{
+    background-color: var(--color-banner);
+    color: white;
+    padding: 10px;
+}
+
+.logo{
+    width: 65px;
+    height: auto;
+    margin-right: 20px;
+    margin-top: 2px;
+}
+
+.header__titulo{
+    margin-top: 15px;
+    margin-right: 100px;
+    font-size: 50px;
+    font-family: titulofont;
+}
+.header__titulo2{
+    font-family: titulofont;
+    margin-top: 10px;
+    font-size: 50px;
+}
+
+.botones{
+    margin-bottom: 5px;
+    margin-right: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(50, 80, 192);
+    text-shadow: 3px 3px 4px black
+}
+
+.botones:hover{
+    color: rgb(172, 26, 26);
+    text-decoration: overline;
+}
+
+.footer__banner{
+    background-color: var(--color-banner);
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.footer_branding{
+    color: whitesmoke;
+}
+
+.navbar-toggler-icon{
+    background-color: rgb(215, 203, 207);
+    padding: 20px;
+}
+
+.main_iconos{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* information site */
+
+.main_titulo_info{
+    padding: 30px 10px;
+    color: white;
+    background-color: rgba(34, 14, 14, 0.767);
+}
+
+.main_cavani {
+    margin-left: 10px;
+}
+
+.main_video_resolution{
+    margin-left: 10px;
+}
+
+.informacion_background{
+
+    background-image: url('../assets/img/LA12.jpg');
+    background-size: cover;
+}
+
+.informacion_background::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1
+}
+
+/* information site */
+
+/* galery site */
+
+.main_carousel{
+    margin-top: 30px;
+}
+
+/* galery site */
+
+/* contact site */
+
+.correox{
+    margin-top: 15px;
+    text-align: center;
+}
+.whatsapp{
+    margin-right: 20px;
+    position: fixed;
+    right: 0;
+    bottom: 80px;
+}
+
+/* contact site */
+
+/* exploit site */
+
+.main_video{
+    margin-bottom: 80px;
+}
+
+.main_video_titulo{
+    margin-top: 10px;
+}
+
+/* exploit site */
+
+
+@media screen and (min-width: 300px) and (max-width: 1000px) {
+    .header__container {
+      text-align: center;
+    }
+    .logo{
+        display: none; /* seteado en invisible a la vista mobile */
+        margin-right: 40px;
+        margin-bottom: 10px;
+        width: 100px;
+    }
+    .header__titulo{
+        display: none;
+    }
+    .botones:hover{
+        text-decoration: none;
+    }
+    .botones{
+        padding: 5px;
+        margin-left: 50px;
+        background-color: rgba(185, 67, 58, 0.689);
+        border: solid black;
+        text-shadow: 1px 1px 2px black
+    }
+
+    .main_cavani{
+        width: 95%;
+        margin-left: 10px;
+    }
+
+    .main_video_resolution{
+        width: 90%;
+        height: 315;
+    }
+
+    .main_youtube{
+        margin-bottom: 40px;
+        }
+    .fixed-bottom{
+            position: relative;
+        }
+    .fixed-bottom1{
+        position: absolute;
+    }
+
+
+
+  }
+
+
+
+  /* se utiliza el boostrap para el responsive de los contenedores, 
+  y se usa @media query para ajustar de forma manual algunos elementos */

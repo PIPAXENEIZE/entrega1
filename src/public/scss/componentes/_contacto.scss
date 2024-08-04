@@ -1,0 +1,17 @@
+/* contact site */
+
+.checkglobal4{
+    @include checkglobal;
+}
+
+.correox {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.whatsapp {
+    margin-right: 20px;
+    position: fixed;
+    right: 0;
+    bottom: 80px;
+}

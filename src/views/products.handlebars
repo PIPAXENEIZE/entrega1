@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+</head>
+<body>
+
+    <h1>Lista de Productos</h1>
+    <ul>
+        {{#each products}}
+            <div>
+                <li>
+                    Producto: {{this.title}}<br>
+                    <img src="{{this.img}}" width="200"><br>
+                    - Descripcion: {{this.description}}<br>
+                    - Cantidad: {{this.quantity}}<br>
+                    - Precio: {{this.price}}<br>
+                    <br><br><br><br><br><br><br>
+                </li>
+            </div>
+        {{/each}}
+    </ul>
+
+
+ {{#if hasPrevPage}}
+    <a href="/pv3?page={{prevPage}}"><button>Anterior</button></a>
+ {{/if}}
+
+ <h4>{{page}}</h4>
+
+ {{#if hasNextPage}}
+    <a href="/pv3?page={{nextPage}}"><button>Siguiente</button></a>
+ {{/if}}
+
+</body>
+</html>

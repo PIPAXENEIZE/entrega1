@@ -1,0 +1,19 @@
+/* galery site */
+
+.checkglobal2{
+    @include checkglobal;
+}
+
+.main_carousel {
+    margin-top: 30px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 1000px) {
+    .fixed-bottom {
+        position: relative;
+    }
+
+    .fixed-bottom1 {
+        position: absolute;
+    }
+}
