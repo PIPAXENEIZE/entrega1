@@ -4,10 +4,9 @@ import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import __dirname from './utils.js';
 import { Server } from 'socket.io';
-import ProductsRouter from './routes/products.router.js';
-import CartRouter from './routes/cart.router.js';
 import sessionsRouter from './routes/sessions.router.js';
 import viewsRouter from './routes/views.router.js'
+import CartRouter from './routes/cart.router.js';
 
 
 const app = express();
