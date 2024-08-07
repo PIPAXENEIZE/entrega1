@@ -2,7 +2,6 @@ import express from 'express';
 import { engine } from 'express-handlebars';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
-import { v4 as uuidv4 } from 'uuid'; // generador de IDS UNICAS
 import __dirname from './utils.js';
 import { Server } from 'socket.io';
 import ProductsRouter from './routes/products.router.js';
