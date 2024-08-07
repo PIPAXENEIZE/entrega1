@@ -3,25 +3,13 @@ import mongoose from "mongoose";
 const collection = 'Users';
 
 const schema = new mongoose.Schema({
-    firstName:{
-        type:String,
-        required:true
-    },
-    lastName:{
-        type:String,
-        required:true
-    },
-    email: {
-        type: String,
-        required:true,
-        unique: true
-    },
-    password:{
-        type:String,
-        required:true
-    },
-    dateOfBirth: Date,
+    firstName: {type:String, required:true},
+    lastName: {type:String, required:true},
+    email: {type: String, required:true, unique:true},
+    password:{type:String, required:true},
+    dateOfBirth: {type:Date, required:true},
     age: Number,
+    registrationYear: {type: Number,default: new Date().getFullYear()},
     role: {
         type: String,
         enum: ['user', 'admin'],

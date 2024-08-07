@@ -54,8 +54,12 @@ sessionsRouter.post('/login',async (req,res)=>{
 
     const userSession = { 
         id:user._id,
-        name:user.firstName,
-        role:user.role
+        name: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        age: user.age,
+        registrationYear: new Date().getFullYear(),
+        role: user.role
     }
     //creamos el primer token del usuario :) 
     const userToken = jwt.sign(userSession,'CoderSecret:)',{expiresIn:"1d"})

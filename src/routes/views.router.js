@@ -22,7 +22,7 @@ router.get('/profile', (req, res) => {
     }
     try {
         const user = jwt.verify(cookie, 'CoderSecret:)');
-        res.render('Profile', { name: user.name, role: user.role });
+        res.render('Profile', user);
     } catch (error) {
         console.log(error);
         return res.redirect('/login'); // Redirige a la página de login si el token no es válido

@@ -1,22 +1,41 @@
-<h1>Regístrate</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/login.css"> <!-- Enlace al CSS -->
+</head>
+<body>
+    <h1>Regístrate</h1>
 
-<form id="registerForm">
-    <label>Nombre</label>
-    <input name="firstName">
-    <br/>
-    <label>Apellido</label>
-    <input name="lastName">
-    <br/>
-    <label>Email</label>
-    <input name="email">
-    <br/>
-    <label>Fecha de nacimiento</label>
-    <input type="date" name="dateOfBirth">
-    <br/>
-    <label>Contraseña</label>
-    <input name="password">
-    <br/>
-    <input type="submit" value="Registrarse">
-</form>
+    <form id="registerForm">
+        <label>Nombre</label>
+        <input class="styled-input" name="firstName">
+        <br/>
+        <label>Apellido</label>
+        <input class="styled-input" name="lastName">
+        <br/>
+        <label>Email</label>
+        <input class="styled-input" name="email">
+        <br/>
+        <label>Fecha de nacimiento</label>
+        <input class="styled-input" type="date" name="dateOfBirth">
+        <br/>
+        <label>Contraseña</label>
+        <input class="styled-input" name="password" type="password">
+        <br/>
+        <br>
+        <input class="formButton" type="submit" value="Registrarse">
+        <input id="login" class="formButton" value="Iniciar Sesion"
+    </form>
+    <br>
 
-<script src="/js/register.js"></script>
+    <script src="/js/register.js"></script>
+    <script>
+        document.getElementById('login').addEventListener('click', function() {
+            window.location.href = '/login';
+        });
+    </script>
+</body>
+</html>

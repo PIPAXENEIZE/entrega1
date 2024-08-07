@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser';
 import __dirname from './utils.js';
 import { Server } from 'socket.io';
 import sessionsRouter from './routes/sessions.router.js';
+import ProductsRouter from './routes/products.router.js'
 import viewsRouter from './routes/views.router.js'
 import CartRouter from './routes/cart.router.js';
 
