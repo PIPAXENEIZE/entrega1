@@ -68,18 +68,7 @@ sessionsRouter.post('/login',async (req,res)=>{
 })
 
 sessionsRouter.get('/current',(req,res)=>{
-    const cookie = req.cookies['tokencito'];
-    if(!cookie){
-        return res.status(401).send({status:"error",error:"Logueate :)"})
-    }
-    try{
-        const user = jwt.verify(cookie,'CoderSecret:)');
-        console.log(user);
-        return res.send(user);
-    }catch(error){
-        console.log(error);
-        res.send(error);
-    }
+     
 
 });
 

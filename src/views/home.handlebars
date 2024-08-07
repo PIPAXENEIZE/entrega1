@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PIPAXENEIZE WEBSITE</h1>
+        <button id="PIPAXENEIZE_WEB" class="bordo">PIPAXENEIZE C-S ValvE</button>
+        <button id="login" class="verde">Sistema de login</button>
+        <button id="productos" class="verde">Productos</button>
+        <button id="chat" class="verde">Chat WebSockets</button>
+    </div>
 
+    <script>
+        document.getElementById('PIPAXENEIZE_WEB').addEventListener('click', function() {
+            window.location.href = '/home';
+        });
+        document.getElementById('login').addEventListener('click', function() {
+            window.location.href = '/login';
+        });
+        document.getElementById('chat').addEventListener('click', function() {
+            window.location.href = '/chat';
+        });
+        document.getElementById('productos').addEventListener('click', function() {
+            window.location.href = '/products';
+        });
+    </script>
+</body>
+</html>

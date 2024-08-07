@@ -25,14 +25,14 @@ app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'handlebars');
-
-app.use(express.static(`${__dirname}/public`));
 app.use(express.json());
 
 app.use('/', viewsRouter);
 app.use('/api/sessions',sessionsRouter);
 app.use('/products', ProductsRouter)
 app.use('/api/cart', CartRouter);
+
+app.use(express.static(`${__dirname}/public`)); // colocarlo luego para evitar conflicos con el index.html 
 
 const server = app.listen(PORT, () => console.log(`listening on ${PORT}`));
 const socketServer = new Server(server);
