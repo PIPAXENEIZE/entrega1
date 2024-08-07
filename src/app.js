@@ -1,6 +1,7 @@
 import express from 'express';
 import { engine } from 'express-handlebars';
 import mongoose from 'mongoose';
+import cookieParser from 'cookie-parser';
 import __dirname from './utils.js';
 import chat from './routes/chat.js';
 import { Server } from 'socket.io';
@@ -12,6 +13,9 @@ import { v4 as uuidv4 } from 'uuid'; // generador de IDS UNICAS
 import hproducts from './routes/homeproducts.js';
 import productsv2 from './routes/productshome.router.js'
 import viewsrouter from './routes/views.router.js'
+import userLogin from './routes/userLogin.js'
+import sessionsRouter from './routes/sessions.router.js';
+
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -24,10 +28,16 @@ app.engine('handlebars', engine({
         allowProtoMethodsByDefault: true
     }
 }));
+app.use(express.urlencoded({extended:true}));
+app.use(cookieParser());
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'handlebars');
 
+app.use(express.static(`${__dirname}/public`));
 app.use(express.json());
+
+app.use('/', userLogin);
+app.use('/api/sessions',sessionsRouter);
 app.use('/chat', chat);
 app.use('/api/products', ProductsRouter);
 app.use('/api/cart', CartRouter);
