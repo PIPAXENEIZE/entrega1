@@ -1,25 +1,37 @@
 import { Router } from "express";
-import model from '../managers/mongo/products.testeo.js';
+import jwt from 'jsonwebtoken';
 
 const router = Router();
 
-
-router.get('/', async(req,res)=>{
-    const paginationData = await model.paginate({},{page:parseInt(req.query.page)||1, limit:5, lean:true});
-    const products = paginationData.docs
-
-    const {hasPrevPage, hasNextPage, prevPage,nextPage, page:currentPage} = paginationData;
-
-    console.log(paginationData);
-    res.render('products',{
-        products,
-        currentPage,
-        page:currentPage,
-        hasPrevPage,
-        hasNextPage,
-        prevPage,
-        nextPage
-    });
+router.get('/',(req,res)=>{
+    res.render('Home');
 })
+
+router.get('/login',(req,res)=>{
+    res.render('Login');
+})
+
+router.get('/register',(req,res)=>{
+    res.render('Register');
+})
+
+router.get('/profile', (req, res) => {
+    const cookie = req.cookies['tokencito'];
+    if (!cookie) {
+        return res.redirect('/login'); // Redirige a la página de login si no hay cookie
+    }
+    try {
+        const user = jwt.verify(cookie, 'CoderSecret:)');
+        res.render('Profile', { name: user.name, role: user.role });
+    } catch (error) {
+        console.log(error);
+        return res.redirect('/login'); // Redirige a la página de login si el token no es válido
+    }
+});
+
+router.get('/chat', (req, res) => {
+    res.render('Chat');
+});
+
 
 export default router;
